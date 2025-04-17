@@ -1,7 +1,10 @@
 {
   "name": "vimble-mcp",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "index.mjs",
+  "description": "A Model Context Protocol (MCP) server for executing JavaScript code using Vimble.",
+  "homepage": "https://github.com/johnhenry/vimble-mcp",
+  "author": "John Henry <john@iamjohnhenry.com>",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,9 +20,7 @@
     "virtual machine",
     "model context protocol"
   ],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.10.0",
     "vimble": "^0.0.0",

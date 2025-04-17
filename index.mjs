@@ -47,9 +47,10 @@ server.tool(
   Use 'console.error' to show errors.`,
   {
     code: z.string().describe("JavaScript code to execute"), 
-    context: z.object().optional().describe("Optional context to inject into the execution environment")
+    context: z.object().optional().describe("Optional context to inject into the execution environment"),
+    timeout: z.number().optional().describe("Timeout in milliseconds")
   },
-  async ({ code, context } = {context: {}}) => {
+  async ({ code, context, timeout } = {context: {}, timeout:10000}) => {
     try {
       log('Executing JavaScript code:', code.substring(0, 50) + (code.length > 50 ? '...' : ''));
 
@@ -57,12 +58,12 @@ server.tool(
       if (!code || typeof code !== 'string') {
         throw new Error('Invalid code input: code must be a non-empty string');
       }
-      
+
       // Execute the code with proper timeout and memory limits
       const result = await Promise.race([
-        vimble(code, context),
+        vimble(code, context, timeout),
         new Promise((_, reject) => 
-          setTimeout(() => reject(new Error('Execution timed out (10s limit)')), 10000)
+          setTimeout(() => reject(new Error(`Execution timed out (${timeout}ms limit)`)), timeout)
         )
       ]);
       log('Executing JavaScript code:', result.substring(0, 50) + (result.length > 50 ? '...' : ''));
