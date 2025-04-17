@@ -1,0 +1,29 @@
+{
+  "name": "vimble-mcp",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "vimble-mcp": "./index.mjs"
+  },
+  "type": "module",
+  "keywords": [
+    "mcp",
+    "vimble",
+    "javascript",
+    "execution",
+    "virtual machine",
+    "model context protocol"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.0",
+    "vimble": "^0.0.0",
+    "zod": "^3.24.3",
+    "zod-to-json-schema": "^3.24.5"
+  }
+}
