@@ -1,6 +1,6 @@
 {
   "name": "vimble-mcp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.mjs",
   "description": "A Model Context Protocol (MCP) server for executing JavaScript code using Vimble.",
   "homepage": "https://github.com/johnhenry/vimble-mcp",
