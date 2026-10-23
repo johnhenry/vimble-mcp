@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { z } from "zod";
-import { runWithInjectedConsole as vimble } from 'vimble';
+import { runWithInjectedConsole as vimble } from '@johnhenry/vimble';
 import {
   McpServer,
 } from "@modelcontextprotocol/sdk/server/mcp.js";

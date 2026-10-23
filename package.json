@@ -1,17 +1,18 @@
 {
-  "name": "vimble-mcp",
-  "version": "0.0.1",
-  "main": "index.mjs",
+  "name": "@johnhenry/vimble-mcp",
+  "version": "0.1.0",
   "description": "A Model Context Protocol (MCP) server for executing JavaScript code using Vimble.",
-  "homepage": "https://github.com/johnhenry/vimble-mcp",
-  "author": "John Henry <john@iamjohnhenry.com>",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "type": "module",
+  "main": "index.mjs",
   "bin": {
     "vimble-mcp": "./index.mjs"
   },
-  "type": "module",
+  "files": [
+    "index.mjs"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
   "keywords": [
     "mcp",
     "vimble",
@@ -20,11 +21,26 @@
     "virtual machine",
     "model context protocol"
   ],
+  "author": "John Henry <john@iamjohnhenry.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.10.0",
-    "vimble": "^0.0.1",
     "zod": "^3.24.3",
-    "zod-to-json-schema": "^3.24.5"
+    "zod-to-json-schema": "^3.24.5",
+    "@johnhenry/vimble": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnhenry/vimble-mcp.git"
+  },
+  "homepage": "https://github.com/johnhenry/vimble-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/johnhenry/vimble-mcp/issues"
   }
 }

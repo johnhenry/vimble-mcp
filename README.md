@@ -1,5 +1,7 @@
 # vimble-mcp
 
+> Previously published on npm as `vimble-mcp` (unscoped). That name is no longer updated; use `@johnhenry/vimble-mcp`.
+
 A Model Context Protocol (MCP) server for executing JavaScript code using Vimble.
 
 ## Features
@@ -24,7 +26,7 @@ Add the following to your MCP JSON configuration
     ...
     "vimble-mcp": {
       "command": "npx",
-      "args": [ "-y", "vimble-mcp"]
+      "args": [ "-y", "@johnhenry/vimble-mcp"]
     }
   }
 }
